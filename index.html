@@ -39,11 +39,11 @@
 		<script>
 			// 检测浏览器是否支持SW
 			if('serviceWorker' in navigator) {
-				window.addEventListener('DOMContentLoaded',function() {
-					navigator.serviceWorker.register('sw.js').then(function(registration) {
+				window.addEventListener('load',function() {
+					navigator.serviceWorker.register('./sw.js').then(function(registration) {
 						console.log('支持sw:',registartion.scope);
 					}).catch(function(err) {
-						console.log('no 支持sw:',err);
+						console.log('不支持sw:',err);
 					});
 				});
 			}
