@@ -29,6 +29,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Scripts -->
+		<script>
+			// 检测浏览器是否支持SW
+			if('serviceWorker' in navigator) {
+				console.log('支持serviceWorker');
+				window.addEventListener('DOMContentLoaded',function() {
+					navigator.serviceWorker.register('sw.js').then(function(registration) {
+						console.log('支持sw:',registartion.scope);
+					}).catch(function(err) {
+						console.log('支持sw:',err);
+					});
+				});
+			}
+		</script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -360,28 +382,6 @@
 					</footer>
 
 			</div>
-
-		<!-- Scripts -->
-			<script>
-				// 检测浏览器是否支持SW
-				if('serviceWorker' in navigator) {
-					console.log('支持serviceWorker');
-					window.addEventListener('DOMContentLoaded',function() {
-						navigator.serviceWorker.register('sw.js').then(function(registration) {
-							console.log('支持sw:',registartion.scope);
-						}).catch(function(err) {
-							console.log('支持sw:',err);
-						});
-					});
-				}
-			</script>
-			<!--script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>-->
 
 	</body>
 </html>
