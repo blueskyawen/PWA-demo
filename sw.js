@@ -2,7 +2,7 @@
  * Created by root on 2/16/19.
  */
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
-var cacheStorageKey = 'story-pwa'
+var cacheStorageKey = 'story-pwa';
 var cacheList=[
     '/',
     'index.html',
