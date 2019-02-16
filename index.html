@@ -43,7 +43,7 @@
 					navigator.serviceWorker.register('sw.js').then(function(registration) {
 						console.log('支持sw:',registartion.scope);
 					}).catch(function(err) {
-						console.log('支持sw:',err);
+						console.log('no 支持sw:',err);
 					});
 				});
 			}
