@@ -362,6 +362,19 @@
 			</div>
 
 		<!-- Scripts -->
+			<script>
+				// 检测浏览器是否支持SW
+				if('serviceWorker' in navigator) {
+					console.log('支持serviceWorker');
+					window.addEventListener('DOMContentLoaded',function() {
+						navigator.serviceWorker.register('sw.js').then(function(registration) {
+							console.log('支持sw:',registartion.scope);
+						}).catch(function(err) {
+							console.log('支持sw:',err);
+						});
+					});
+				}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -371,16 +384,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-	<script>
-		// 检测浏览器是否支持SW
-		if('serviceWorker' in navigator) {
-			window.addEventListener('DOMContentLoaded',function() {
-				navigator.serviceWorker.register('sw.js').then(function(registration) {
-					console.log('支持sw:',registartion.scope);
-				}).catch(function(err) {
-					console.log('支持sw:',err);
-				});
-			});
-		}
-	</script>
 </html>

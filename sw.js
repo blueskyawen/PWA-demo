@@ -29,16 +29,16 @@ self.addEventListener('fetch',function(e){
 self.addEventListener('activate',function(e){
     e.waitUntil(
         //获取所有cache名称
-        caches.keys().then(cacheNames => {
+        caches.keys().then(function(cacheNames) {
             return Promise.all(
                 // 获取所有不同于当前版本名称cache下的内容
-                cacheNames.filter(cacheNames => {
+                cacheNames.filter(function(cacheNames) {
                     return cacheNames !== cacheStorageKey
-                }).map(cacheNames => {
+                }).map(function(cacheNames) {
                 return caches.delete(cacheNames)
             })
         )
-        }).then(() => {
+        }).then(function() {
             return self.clients.claim()
         })
     )
