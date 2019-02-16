@@ -6,7 +6,21 @@ var cacheStorageKey = 'story-pwa';
 var cacheList=[
     '/',
     'index.html',
-    'assets/css/main.css'
+    'assets/css/main.css',
+    'icons/android-icon-36x36.png',
+    'icons/android-icon-48x48.png',
+    'icons/android-icon-72x72.png',
+    'icons/android-icon-96x96.png',
+    'icons/android-icon-144x144.png',
+    'icons/android-icon-192x192.png',
+    'icons/favicon.ico',
+    'icons/favicon-16x16.png',
+    'icons/favicon-32x32.png',
+    'icons/favicon-96x96.png',
+    'icons/ms-icon-70x70.png',
+    'icons/ms-icon-144x144.png',
+    'icons/ms-icon-150x150.png',
+    'icons/ms-icon-310x310.png'
 ];
 self.addEventListener('install',function(e) {
     e.waitUntil(
