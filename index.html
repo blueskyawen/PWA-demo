@@ -34,27 +34,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-		<!-- Scripts -->
-		<script>
-			// 检测浏览器是否支持SW
-			if('serviceWorker' in navigator) {
-				window.addEventListener('load',function() {
-					navigator.serviceWorker.register('./sw.js').then(function(registration) {
-						console.log('支持sw:',registartion.scope);
-					}).catch(function(err) {
-						console.log('不支持sw:',err);
-					});
-				});
-			}
-		</script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -71,7 +50,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/banner.jpg" alt="" />
+							<img src="https://html5up.net/uploads/demos/story/images/banner.jpg" alt="" />
 						</div>
 					</section>
 
@@ -85,7 +64,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/spotlight01.jpg" alt="" />
+							<img src="https://html5up.net/uploads/demos/story/images/spotlight01.jpg" alt="" />
 						</div>
 					</section>
 
@@ -99,7 +78,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
+							<img src="https://html5up.net/uploads/demos/story/images/spotlight02.jpg" alt="" />
 						</div>
 					</section>
 
@@ -113,7 +92,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
+							<img src="https://html5up.net/uploads/demos/story/images/spotlight03.jpg" alt="" />
 						</div>
 					</section>
 
@@ -387,5 +366,26 @@
 
 			</div>
 
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Scripts -->
+		<script>
+			// 检测浏览器是否支持SW
+			if('serviceWorker' in navigator) {
+				window.addEventListener('load',function() {
+					navigator.serviceWorker.register('./sw.js').then(function(registration) {
+						console.log('支持sw:',registartion.scope);
+					}).catch(function(err) {
+						console.log('不支持sw:',err);
+					});
+				});
+			}
+		</script>
 	</body>
 </html>
